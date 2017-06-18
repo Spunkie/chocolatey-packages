@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>color-sustainer</id>
+    <version>1.05</version>
+    <packageSourceUrl>https://github.com/Spunkie/chocolatey-packages/tree/master/manual/color-sustainer</packageSourceUrl>
+    <owners>Spunkie</owners>
+    <title>Color Sustainer</title>
+    <authors>Ramzi Sabra (a.k.a yasamoka)</authors>
+    <projectUrl>http://www.guru3d.com/files-details/color-sustainer-download.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/Spunkie/chocolatey-packages/master/manual/color-sustainer/icon.png</iconUrl>
+    <copyright>2014-2017 Ramzi Sabra (a.k.a yasamoka)</copyright>
+    <!--licenseUrl>https://www.gnu.org/licenses/lgpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance-->
+    <docsUrl>https://cdn.rawgit.com/Spunkie/chocolatey-packages/433d6fa7/manual/color-sustainer/tools/README.docx</docsUrl>
+    <mailingListUrl>http://forums.guru3d.com/showthread.php?t=386325</mailingListUrl>
+    <tags>color-sustainer admin color sustainer ICC profile monitor gamma</tags>
+    <summary>Color Sustainer (ICC Profile Enforcer) is an application that allows you to associate color profiles with particular display modes.</summary>
+    <description>
+# Introduction
+Color Sustainer (ICC Profile Enforcer). Color Sustainer is an application that allows you to associate color profiles with particular display modes
+
+These profiles are loaded automatically for their respective modes as you:
+
+- switch displays on and off
+- add and remove displays
+- change display modes - from Windows, games, media players, this application, or any other application
+- load up full-screen applications (e.g. games) that reset and override (but not ignore) set color profiles.
+
+### Change display color profile association mode
+
+Right-click a display in mode-specific mode (default) and click "Change to Global" to associate a single global color profile to the display. Right-click a display in global mode and click "Change to Mode-specific" to associate color profiles to specific display modes.
+
+This application requires the Microsoft Visual C++ 2010 redistributable to be installed. Please check up on [**this forum thread**](http://forums.guru3d.com/showthread.php?t=386325) for questions and more info. 
+    </description>
+    <releaseNotes>
+# 1.05
+##### Resolved the following issues:
+- Fixed profile parsing. Now all profiles that can be loaded into the graphics card (have a video card gamma table) work. Thanks to imyrno for the detailed steps for profile parsing.
+- Fixed the memory leak that occurs when the application is started and looping.
+- Fixed an update checking bug whereby newer versions yet unreleased to the public are not deemed newer than the latest version released.
+
+##### NOTICE:
+Users may have been recently notified that a Color Sustainer update is available when there is none. The notification will not go away unless you press "Never remind me again" which may deprive you in the future of being notified of important updates to Color Sustainer.
+
+A hotfix is on its way to fix the issue at hand, but meanwhile, merely editing the Color Sustainer settings text file and changing ``updateAvailable=1`` to `updateAvailable=0` will fix the issue given the server for the version update check is back online the next time Color Sustainer checks for an update (upon application launch / 24 hours after last check if Color Sustainer remains running). Thank you for your understanding and apologies for any annoyances caused by this confusion.
+    </releaseNotes>
+    <dependencies>
+      <dependency id="vcredist2010" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

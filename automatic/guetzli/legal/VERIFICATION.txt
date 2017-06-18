@@ -1,0 +1,28 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+Package can be verified like this:
+
+1. Go to
+
+   x32: https://github.com/google/guetzli/releases/download/v1.0.1/guetzli_windows_x86.exe
+   x64: https://github.com/google/guetzli/releases/download/v1.0.1/guetzli_windows_x86-64.exe
+
+   to download the installer.
+
+2. You can use one of the following methods to obtain the SHA256 checksum:
+   - Use powershell function 'Get-FileHash'
+   - Use Chocolatey utility 'checksum.exe'
+
+   checksum32: 7fb69c00a99a9c0fd7e47f4d263b74c68a7e63405fc27784d955895e8b7f2061
+   checksum64: bbac41d606c96cc57a94c802e581591647d6e1cfc83a97522509edbd392faeca
+
+Using AU:
+
+   Get-RemoteChecksum32 https://github.com/google/guetzli/releases/download/v1.0.1/guetzli_windows_x86.exe
+   Get-RemoteChecksum64 https://github.com/google/guetzli/releases/download/v1.0.1/guetzli_windows_x86-64.exe
+
+File 'LICENSE.txt' is obtained from:
+    LICENSE: https://raw.githubusercontent.com/google/guetzli/v1.0.1/LICENSE

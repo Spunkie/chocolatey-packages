@@ -1,0 +1,133 @@
+1.05:
+
+Resolved the following issues:
+
+-Fixed profile parsing. Now all profiles that can be loaded into the graphics card (have a video card gamma table) work. Thanks to imyrno for the detailed steps for profile parsing.
+
+-Fixed the memory leak that occurs when the application is started and looping.
+
+-Fixed an update checking bug whereby newer versions yet unreleased to the public are not deemed newer than the latest version released.
+
+
+1.04.2:
+
+-Removed "by yasamoka" in title, "Donate" section under "Help", added "About Color Sustainer" section under "Help".
+
+Resolved the following issues:
+
+-Made the update system smarter; now it properly compares version numbers and does not only check for mismatch.
+
+-The "Check for updates periodically" checkbox is unchecked if the settings window is shown, an update is available, and "Never remind me again" is pressed.
+
+-Tray icon context menu now gets drawn upwards rather than downwards the first time the tray icon is right-clicked with the taskbar placed at the bottom.
+
+-LUT Bit Depth Clamp now works for monitors in global color profile association mode.
+
+-Start / Stop main window action button text now first shows "Stop" instead of "Start" if Color Sustainer is started via "-start" argument.
+
+-The version field in the Settings file has to be at the top else loading the settings fails.
+
+-An invalid settings keyword no longer causes settings loading to fail. (Useful for using older versions with settings files produced by newer versions)
+
+-Changing one monitor from global to mode-specific color profile association mode then selecting a second monitor that is in global mode now clears the Resolutions list.
+
+-Resolutions are now automatically detected after changing a monitor from global to mode-specific color profile association mode.
+
+-Startup settings now get checked and updated upon application launch.
+
+-Deleting a monitor in global color profile association mode now hides all the widgets related to associating a color profile / predefined tint.
+
+-The README file now accomodates changes made since v1.04.1.
+
+
+1.04.1:
+-Emergency v1.04 hotfix
+
+
+1.04:
+
+Resolved the following issues:
+
+-Color profile association section remains visible after a monitor in global mode is deleted
+
+-Disabled buttons (greyed out) instead of hiding them
+
+-Delete All Button gets disabled when there is nothing to delete
+
+-Disabled the ability to resize windows (adds empty space)
+
+-Tree no longer gets saved directly after being loaded (even successfully)
+
+-Used a higher-resolution icon for the application windows
+
+-Revamped the settings section
+
+-Separated the tray icon modes from the application (going to be included in a sister application later on)
+
+New features:
+-Software update checking system
+-Donate button
+
+
+1.03.3:
+
+Resolved the following issues:
+
+-Debug line shows up in display list
+
+-Log shows v1.03 at application launch
+
+-Associating a new replacement color profile for an active display mode for an active monitor while the loop is running does not change the profile.
+
+-Display Device Enumeration issue: on calling EnumDisplayDevices, assumed that only one display can be detected per device, used if statement instead of while loop
+
+
+1.03.2:
+
+Resolved the following issues:
+
+-Removing a profile association from an active monitor in Global mode while the loop is running does not set the current profile to NULL.
+
+-Setting a color profile (or changing from such color profile to a pre-defined tint) to an inactive mode for an active monitor in Mode-specific mode will set the current profile's ramp but not name to that color profile.
+
+-Changed title to v1.03.2 (was 1.03 for v1.03.1)
+
+1.03.1:
+
+New feature:
+-Change a monitor between Global mode / Mode-specific mode.
+
+
+1.03:
+
+Resolved the following issues:
+
+-Display mode X is selected in the list and is the active display mode. Windows / external application changes the active mode. Now display mode X is not the active mode. Right-clicking on the already-selected display mode X does not show a "Change to Mode" option.
+
+-Trying to associate a color profile that cannot be parsed results in logging "Failed to parse..." followed by "Associating color profile...". The (now null / random) gamma ramp then fails to load or be preserved.
+
+-Color profiles now get closed after they are parsed (success / fail), instead of remaining open as long as Color Sustainer is running.
+
+-Detect button shows for display mode and not for resolution when an inactive display is chosen
+
+Changes:
+
+-Log application launch
+
+-Log success or failure for mode request changes
+
+-Close to Tray instead of Minimize to Tray
+
+-Tray icon now changes when started or stopped
+
+-Added separate detect and delete options for monitors, resolutions, modes
+
+New Feature:
+
+-Tray Icon Display Modes: You can now add display modes to the tray icon, for quick switching between display modes straight from the tray. Right-click, hover over a monitor, and click on the display mode and the monitor should switch to that mode.
+
+
+
+1.02:
+
+Release

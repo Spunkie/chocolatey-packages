@@ -1,0 +1,6 @@
+*.nupkg
+Thumbs.db
+.DS_Store
+update_vars_default.ps1
+Update-Force-Test-.md
+node_modules
