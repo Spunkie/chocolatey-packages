@@ -8,7 +8,7 @@
         <title>Snappy Driver Installer Origin</title>
         <authors>Glenn Delahoy</authors>
         <projectUrl>http://www.snappy-driver-installer.org/</projectUrl>
-        <iconUrl>https://cdn.rawgit.com/Spunkie/chocolatey-packages/657b31b9c13d0ef29cc543c491a7df9ed1fa9200/automatic/sdio/icon.png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/Spunkie/chocolatey-packages/a189a397e2b7eecd723f317bfd5473bcb4da2ecf/automatic/sdio/icon.png</iconUrl>
         <licenseUrl>https://sourceforge.net/p/snappy-driver-installer-origin/code/HEAD/tree/branches/stable/resources/gpl-3.0.txt</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <projectSourceUrl>https://sourceforge.net/p/snappy-driver-installer-origin/code/</projectSourceUrl>
@@ -36,10 +36,10 @@ Keep it on your USB flash drive and use it on the go. No installation is necessa
 You'll be notified about available updates and you'll be able to download them with the tool itself.
 
 ### Safety
-Easy system restore point creation. 
+Easy system restore point creation.
 
 ### Supports all Windows
-Compatible with all versions of Windows, including server editions. 
+Compatible with all versions of Windows, including server editions.
 
 ### Customizable
 Pick any theme you like or make your own.
@@ -51,7 +51,7 @@ State of the art algorithms for finding the best matching drivers for any device
 Licensed under GNU GPL v3.0.
 
 ### Multilingual
-Twenty-seven languages are supported. Your language is probably among them.	
+Twenty-seven languages are supported. Your language is probably among them.
 
 ### Supports: Windows XP, Vista, 7, 8, 8.1, 10
 

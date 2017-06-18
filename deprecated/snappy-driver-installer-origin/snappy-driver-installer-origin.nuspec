@@ -8,7 +8,7 @@
         <title>[Deprecated] Snappy Driver Installer Origin</title>
         <authors>Glenn Delahoy</authors>
         <projectUrl>http://www.snappy-driver-installer.org/</projectUrl>
-        <iconUrl>https://cdn.rawgit.com/Spunkie/chocolatey-packages/a2d4e431eda2af8b0e1c8e46815742fa4b0f8a7f/icons/snappy-driver-installer-origin.png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/Spunkie/chocolatey-packages/a189a397e2b7eecd723f317bfd5473bcb4da2ecf/icons/snappy-driver-installer-origin.png</iconUrl>
         <licenseUrl>https://sourceforge.net/p/snappy-driver-installer-origin/code/HEAD/tree/branches/stable/resources/gpl-3.0.txt</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <projectSourceUrl>https://sourceforge.net/p/snappy-driver-installer-origin/code/</projectSourceUrl>

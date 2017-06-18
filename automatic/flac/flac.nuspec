@@ -13,7 +13,7 @@
         <docsUrl>https://xiph.org/flac/documentation.html</docsUrl>
         <mailingListUrl>http://lists.xiph.org/mailman/listinfo/flac</mailingListUrl>
         <bugTrackerUrl>https://sourceforge.net/p/flac/bugs/</bugTrackerUrl>
-        <iconUrl>https://cdn.rawgit.com/Spunkie/chocolatey-packages/481c932df5e2e23b41f30c8ce34f2a802b15de7a/automatic/flac/icon.png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/Spunkie/chocolatey-packages/a189a397e2b7eecd723f317bfd5473bcb4da2ecf/automatic/flac/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description><![CDATA[# what is FLAC?
 

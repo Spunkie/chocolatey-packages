@@ -11,7 +11,7 @@
     <projectUrl>https://www.jetbrains.com/phpstorm/</projectUrl>
     <docsUrl>https://www.jetbrains.com/help/phpstorm/</docsUrl>
     <bugTrackerUrl>https://youtrack.jetbrains.com/issues/WI</bugTrackerUrl>
-    <iconUrl>https://cdn.rawgit.com/Spunkie/chocolatey-packages/ed490cc934c3ae5a3e018106617f5b0dc8a735fd/automatic/phpstorm/icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/Spunkie/chocolatey-packages/a189a397e2b7eecd723f317bfd5473bcb4da2ecf/automatic/phpstorm/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>PhpStorm - Lightning-smart PHP IDE</summary>
     <tags>PHP HTML CSS IDE jetbrains idea PhpStorm EAP PhpStorm-EAP developer productivity code admin trial</tags>
