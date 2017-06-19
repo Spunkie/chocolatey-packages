@@ -62,7 +62,6 @@ _Since `r558` all application data, including downloaded drivers, is stored unde
         <releaseNotes>[latest changelog.txt](https://sourceforge.net/p/snappy-driver-installer-origin/code/HEAD/tree/trunk/changelog.txt?format=raw)</releaseNotes>
     </metadata>
     <files>
-        <file src="legal\**" target="legal" />
         <file src="tools\**" target="tools" />
     </files>
 </package>

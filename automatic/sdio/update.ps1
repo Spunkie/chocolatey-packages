@@ -9,6 +9,7 @@ function global:au_SearchReplace {
         "tools\chocolateyInstall.ps1" = @{
             "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
             "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
+            "(?i)(^\s*.fullVersion\s*=\s*)('.*')" = "`$1'$($Latest.fullVersion)'"
             "(?i)(^\s*.baseVersion\s*=\s*)('.*')" = "`$1'$($Latest.baseVersion)'"
             "(?i)(^\s*.fileName32\s*=\s*)('.*')"  = "`$1'SDIO_R$($Latest.baseVersion).exe'"
             "(?i)(^\s*.fileName64\s*=\s*)('.*')"  = "`$1'SDIO_x64_R$($Latest.baseVersion).exe'"
@@ -24,16 +25,17 @@ function global:au_SearchReplace {
 
 function global:au_AfterUpdate  {
     $baseVersion = $Latest.baseVersion
+    $fullVersion = $Latest.fullVersion
 
     Remove-Item ".\*.nupkg"
     Set-DescriptionFromReadme -SkipFirst 2
-    New-Item ".\tools\SDIO_R${baseVersion}" -ItemType Directory
-    New-Item ".\tools\SDIO_R${baseVersion}\SDIO_R${baseVersion}.exe.gui" -ItemType file
-    New-Item ".\tools\SDIO_R${baseVersion}\SDIO_x64_R${baseVersion}.exe.gui" -ItemType file
+    New-Item ".\tools\SDIO_${fullVersion}" -ItemType Directory
+    New-Item ".\tools\SDIO_${fullVersion}\SDIO_R${baseVersion}.exe.gui" -ItemType file
+    New-Item ".\tools\SDIO_${fullVersion}\SDIO_x64_R${baseVersion}.exe.gui" -ItemType file
 }
 
 function global:au_BeforeUpdate {
-    Remove-Item ".\tools\SDIO_R*" -Force -Recurse
+    Remove-Item ".\tools\SDIO_*" -Force -Recurse
 }
 
 function global:au_GetLatest {
@@ -44,6 +46,7 @@ function global:au_GetLatest {
 
     @{
         Version      = $version
+        fullVersion  = $version
         baseVersion  = $baseVersion
         URL32        = "https://downloads.sourceforge.net/project/snappy-driver-installer-origin/SDIO_${version}.zip"
     }
