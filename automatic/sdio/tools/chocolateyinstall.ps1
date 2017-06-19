@@ -19,9 +19,10 @@ if (!(Test-Path -path "$ENV:ALLUSERSPROFILE\SDIO")) {
 $shortcutName    = 'Snappy Driver Installer Origin'
 $fileName32      = 'SDIO_R576.exe'
 $fileName64      = 'SDIO_x64_R576.exe'
+$fullVersion     = ''
 $baseVersion     = '576'
-$FileFullpath32  = Join-Path $ToolsDir\SDIO_R$baseVersion $fileName32
-$FileFullpath64  = Join-Path $ToolsDir\SDIO_R$baseVersion $fileName64
+$FileFullpath32  = Join-Path $ToolsDir\SDIO_$fullVersion $fileName32
+$FileFullpath64  = Join-Path $ToolsDir\SDIO_$fullVersion $fileName64
 
 if (Get-OSArchitectureWidth -eq 64) {
     Install-ChocolateyShortcut -targetPath $FileFullpath64 -WorkingDirectory "%ALLUSERSPROFILE%\SDIO" -shortcutFilePath "$env:Public\Desktop\$shortcutName.lnk"
