@@ -10,6 +10,7 @@ $packageArgs = @{
     checksumType  = 'sha256'
 }
 
+Remove-Item "$ToolsDir\SDIO_*" -Force -Recurse # Cleanup old versions
 Install-ChocolateyZipPackage @packageArgs
 
 if (!(Test-Path -path "$ENV:ALLUSERSPROFILE\SDIO")) {
