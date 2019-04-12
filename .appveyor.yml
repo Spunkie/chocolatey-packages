@@ -21,7 +21,7 @@ environment:
   # Github token to commit pushed packages to repository
   github_user_repo: Spunkie/chocolatey-packages
   github_api_key:
-    secure: ohpNJLWskhWQUMrZmVtaY/6lfhZbWvglfIpNmtBzU0MJm1RB/lBvpH6yV/7l/8Yz
+    secure: Xa9i6Op1jpsiMm/1TjSJLptvjl0u9wyiMccS6idoOCKLmSZ5hhrjpIt80AVutHeK
 
 
   # Mail credentials - for error notifications

@@ -25,7 +25,7 @@ function global:au_BeforeUpdate {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
-    $title = $download_page.Links | ? href -EQ '/projects/flac/files/latest/download?source=files' | % title | select -First 1 # /flac-win/flac-1.3.2-win.zip:  released on 2017-01-01 02:11:25 UTC
+    $title = $download_page.Links | ? href -EQ '/projects/flac/files/latest/download' | % title | select -First 1 # /flac-win/flac-1.3.2-win.zip:  released on 2017-01-01 02:11:25 UTC
     $version = [regex]::match($title, '([\d\.]*)-win.zip').Groups[1].Value # 1.3.2
 
     @{

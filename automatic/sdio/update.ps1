@@ -2,7 +2,7 @@ import-module au
 
 . "..\_scripts\all.ps1"
 
-$releases = 'https://sourceforge.net/projects/snappy-driver-installer-origin/files/'
+$releases = 'https://www.snappy-driver-installer.org/feed/'
 
 function global:au_SearchReplace {
    @{
@@ -32,6 +32,7 @@ function global:au_AfterUpdate  {
     New-Item ".\tools\SDIO_${fullVersion}" -ItemType Directory
     New-Item ".\tools\SDIO_${fullVersion}\SDIO_R${baseVersion}.exe.gui" -ItemType file
     New-Item ".\tools\SDIO_${fullVersion}\SDIO_x64_R${baseVersion}.exe.gui" -ItemType file
+    New-Item ".\tools\SDIO_${fullVersion}\SDIOTranslationTool.exe.gui" -ItemType file
 }
 
 function global:au_BeforeUpdate {
@@ -40,15 +41,17 @@ function global:au_BeforeUpdate {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
-    $title = $download_page.Links | ? href -EQ '/projects/snappy-driver-installer-origin/files/latest/download?source=files' | % title | select -First 1 # /SDIO_0.6.0.558.zip
-    $version = [regex]::match($title, '[a-zA-Z_]*([\d\.]*)\.zip').Groups[1].Value # 0.6.0.558
-    $baseVersion = $version.split('.')[-1] # 558
+    [xml]$download_page = $download_page.Content
+
+    $title = $download_page.rss.channel.item[0].description.InnerText
+    $version = [regex]::match($title, '([\d]+\.[\d]+\.[\d]+\.[\d]+)').Groups[0].Value # 1.5.0.699
+    $baseVersion = $version.split('.')[-1] # 699
 
     @{
         Version      = $version
         fullVersion  = $version
         baseVersion  = $baseVersion
-        URL32        = "https://downloads.sourceforge.net/project/snappy-driver-installer-origin/SDIO_${version}.zip"
+        URL32        = "https://snappy-driver-installer.org/downloads/SDIO_${version}.zip"
     }
 }
 

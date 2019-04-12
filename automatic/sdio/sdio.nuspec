@@ -9,9 +9,9 @@
         <authors>Glenn Delahoy</authors>
         <projectUrl>http://www.snappy-driver-installer.org/</projectUrl>
         <iconUrl>https://cdn.rawgit.com/Spunkie/chocolatey-packages/a189a397e2b7eecd723f317bfd5473bcb4da2ecf/automatic/sdio/icon.png</iconUrl>
-        <licenseUrl>https://sourceforge.net/p/snappy-driver-installer-origin/code/HEAD/tree/branches/stable/resources/gpl-3.0.txt</licenseUrl>
+        <licenseUrl>https://sourceforge.net/p/snappy-driver-installer-origin/code/HEAD/tree/trunk/resources/gpl-3.0.txt?format=raw</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <projectSourceUrl>https://sourceforge.net/p/snappy-driver-installer-origin/code/</projectSourceUrl>
+        <projectSourceUrl>https://www.snappy-driver-installer.org/</projectSourceUrl>
         <tags>snappy driver installer origin drivers updater utility portable SDI SDIO</tags>
         <summary>Windows driver updater program.</summary>
         <description><![CDATA[# Snappy Driver Installer Origin (SDIO)
@@ -59,7 +59,7 @@ ___
 #### _Maintainer Notes_
 _Since `r558` all application data, including downloaded drivers, is stored under `%ALLUSERSPROFILE%\SDIO`. This folder is cleaned up on uninstall._
 ]]></description>
-        <releaseNotes>[latest changelog.txt](https://sourceforge.net/p/snappy-driver-installer-origin/code/HEAD/tree/trunk/changelog.txt?format=raw)</releaseNotes>
+        <releaseNotes>[latest changelog.txt](https://sourceforge.net/p/snappy-driver-installer-origin/code/HEAD/tree/trunk/docs/changelog.txt?format=raw)</releaseNotes>
     </metadata>
     <files>
         <file src="tools\**" target="tools" />

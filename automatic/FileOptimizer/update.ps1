@@ -20,7 +20,7 @@ function global:au_AfterUpdate  {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
-    $title = $download_page.Links | ? href -EQ '/projects/nikkhokkho/files/latest/download?source=files' | % title | select -First 1
+    $title = $download_page.Links | ? href -EQ '/projects/nikkhokkho/files/latest/download' | % title | select -First 1
     $version = $title -split '/' | select -First 1 -Skip 2
 
     @{
