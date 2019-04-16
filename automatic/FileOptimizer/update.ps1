@@ -25,7 +25,7 @@ function global:au_GetLatest {
 
     @{
         Version      = $version
-        URL32        = "https://downloads.sourceforge.net/project/nikkhokkho/FileOptimizer/${version}/FileOptimizerSetup.exe"
+        URL32        = "https://iweb.dl.sourceforge.net/project/nikkhokkho/FileOptimizer/${version}/FileOptimizerSetup.exe"
     }
 }
 
