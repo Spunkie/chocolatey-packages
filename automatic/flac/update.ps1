@@ -2,7 +2,7 @@ import-module au
 
 . "..\_scripts\all.ps1"
 
-$releases = 'https://sourceforge.net/projects/flac/files/'
+$releases = 'https://ftp.osuosl.org/pub/xiph/releases/flac/'
 
 function global:au_SearchReplace {
    @{
@@ -25,13 +25,18 @@ function global:au_BeforeUpdate {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
-    $title = $download_page.Links | ? href -EQ '/projects/flac/files/latest/download' | % title | select -First 1 # /flac-win/flac-1.3.2-win.zip:  released on 2017-01-01 02:11:25 UTC
-    $version = [regex]::match($title, '([\d\.]*)-win.zip').Groups[1].Value # 1.3.2
+
+    $versions = foreach ($href in $download_page.links.href) {
+        if ($href -notmatch "^.+?\w+?-(\d+\.\d+\.\d+).+$") {
+            continue
+        }
+        [Version]$matches[1]
+    }
+    $latest_version = -join ($versions | Sort-Object -Descending | Select -First 1) # 1.3.4
 
     @{
         Version      = $version
-        # URL32        = "https://downloads.sourceforge.net/project/flac/flac-win/flac-${version}-win.zip"
-        URL32        = "http://downloads.xiph.org/releases/flac/flac-${version}-win.zip"
+        URL32        = "https://downloads.xiph.org/releases/flac/flac-${latest_version}-win.zip"
     }
 }
 
